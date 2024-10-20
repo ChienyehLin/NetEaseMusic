@@ -2,4 +2,5 @@
 <resources>
 
     <style name="Theme.NetEaseMusic" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.ClientApp" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
