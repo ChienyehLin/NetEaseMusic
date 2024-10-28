@@ -1,4 +1,4 @@
-package com.quick.app.core.design.theme
+package com.example.neteasemusic.design.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

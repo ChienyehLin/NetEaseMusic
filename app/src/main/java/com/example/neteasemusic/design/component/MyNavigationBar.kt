@@ -1,20 +1,20 @@
-package com.example.neteasemusic.coredesign.component
+package com.example.neteasemusic.design.component
 
-import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.glance.text.Text
-import com.example.neteasemusic.coredesign.theme.SpaceSmallHeight
+import com.example.neteasemusic.design.theme.SpaceSmallHeight
+
 import com.example.neteasemusic.feature.main.TopLevelDestination
+
 
 /**
  * 底部导航
@@ -23,8 +23,8 @@ import com.example.neteasemusic.feature.main.TopLevelDestination
 fun MyNavigationBar(
     destinations: List<TopLevelDestination>,
     currentDestination: String,
+    modifier: Modifier = Modifier,
     onNavigateToDestination: (Int) -> Unit,
-    modifier: Modifier = Modifier
 ): Unit {
     Row(modifier = Modifier.fillMaxWidth()) {
 
