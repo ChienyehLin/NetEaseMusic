@@ -1,6 +1,7 @@
-package com.example.neteasemusic.coredesign.theme
+package com.quick.app.core.design.theme
 
 import android.os.Build
+import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -8,7 +9,10 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalContext
+
 
 //推荐颜色名称和界面元素对应关系
 //https://m3.material.io/foundations/customization
@@ -77,9 +81,8 @@ val DarkColors = darkColorScheme(
 //    scrim = md_theme_dark_scrim,
 )
 
-
 @Composable
-fun NetEaseMusicTheme(
+fun MyAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
@@ -103,9 +106,29 @@ fun NetEaseMusicTheme(
 //        }
 //    }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    //分割线颜色
+    val dividerColor = if (darkTheme) md_theme_dark_divider else md_theme_light_divider
+    val arrowColor = if (darkTheme) md_theme_dark_arrow else md_theme_light_arrow
+
+    CompositionLocalProvider(
+        LocalDividerColor provides dividerColor,
+        LocalArrowColor provides arrowColor,
+    ) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            shapes = myShapes,
+            content = content
+        )
+    }
 }
+
+//分割线颜色
+val LocalDividerColor = staticCompositionLocalOf { md_theme_light_divider }
+
+//箭头颜色
+val LocalArrowColor = staticCompositionLocalOf { md_theme_light_arrow }
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
+fun supportsDynamicTheming() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+
