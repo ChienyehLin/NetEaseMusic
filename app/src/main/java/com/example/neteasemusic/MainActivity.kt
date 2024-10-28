@@ -17,23 +17,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.neteasemusic.feature.splash.SplashRoute
-import com.example.neteasemusic.ui.theme.NetEaseMusicTheme
-import com.quick.app.R
+import com.example.neteasemusic.coredesign.theme.NetEaseMusicTheme
+import com.example.neteasemusic.ui.MyApp
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))//显示到状态栏
         setContent {
+            val navController = rememberNavController()
             NetEaseMusicTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.primary
-                ) {
-                    SplashRoute()
-                }
+                MyApp(navController)
             }
         }
     }

@@ -228,7 +228,7 @@ dependencies {
     //自定义toast提示
     //https://github.com/tfaki/ComposableSweetToast
     val latest_version =
-    implementation ("com.github.tfaki:ComposableSweetToast:$1.0.1")
+    implementation ("com.github.tfaki:ComposableSweetToast:1.0.1")
 
     //数据存储
     //https://developer.android.google.cn/topic/libraries/architecture/datastore?hl=zh-cn#prefs-vs-proto

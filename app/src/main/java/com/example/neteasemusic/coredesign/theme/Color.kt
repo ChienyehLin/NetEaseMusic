@@ -1,4 +1,4 @@
-package com.example.neteasemusic.ui.theme
+package com.example.neteasemusic.coredesign.theme
 
 import androidx.compose.ui.graphics.Color
 
