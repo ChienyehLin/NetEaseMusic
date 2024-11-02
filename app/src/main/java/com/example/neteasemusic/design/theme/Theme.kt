@@ -1,4 +1,4 @@
-package com.quick.app.core.design.theme
+package com.example.neteasemusic.design.theme
 
 import android.os.Build
 import androidx.annotation.ChecksSdkIntAtLeast
@@ -82,7 +82,7 @@ val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun MyAppTheme(
+fun NetEaseMusicTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,

@@ -1,5 +1,4 @@
-package com.quick.app.core.design.theme
-
+package com.example.neteasemusic.design.theme
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
