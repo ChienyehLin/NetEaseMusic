@@ -13,7 +13,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.example.neteasemusic.design.component.MyNavigationBar
+import com.example.neteasemusic.core.design.component.MyNavigationBar
 import com.example.neteasemusic.feature.discover.DISCOVERY_ROUTE
 import com.example.neteasemusic.feature.discover.DiscoveryRoute
 import com.example.neteasemusic.feature.feed.FeedRoute

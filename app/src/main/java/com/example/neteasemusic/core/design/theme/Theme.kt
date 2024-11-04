@@ -1,4 +1,4 @@
-package com.example.neteasemusic.design.theme
+package com.example.neteasemusic.core.design.theme
 
 import android.os.Build
 import androidx.annotation.ChecksSdkIntAtLeast

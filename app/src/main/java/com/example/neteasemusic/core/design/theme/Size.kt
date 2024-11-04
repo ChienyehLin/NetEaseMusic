@@ -1,4 +1,4 @@
-package com.example.neteasemusic.design.theme
+package com.example.neteasemusic.core.design.theme
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth

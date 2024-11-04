@@ -16,14 +16,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.example.neteasemusic.design.theme.NetEaseMusicTheme
+import com.example.neteasemusic.core.design.theme.NetEaseMusicTheme
 import com.example.neteasemusic.ui.MyApp
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))//显示到状态栏
+        //显示到状态栏
+        enableEdgeToEdge()
+        //全部改状态栏为白色
+        //enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))
+
         setContent {
             val navController = rememberNavController()
             NetEaseMusicTheme {
@@ -35,17 +39,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyButton(titleRes: Int, modifier: Modifier = Modifier) {
-  Button(
-      onClick = {
-          Log.d("MyButton", "点击了")
-      },
-      colors = ButtonDefaults.buttonColors(
-          containerColor = MaterialTheme.colorScheme.primary
-      ),
-      modifier = Modifier.fillMaxWidth()
-  ) {
-      Text(text = stringResource(id = titleRes))
-  }
+    Button(
+        onClick = {
+            Log.d("MyButton", "点击了")
+        },
+        colors = ButtonDefaults.buttonColors(
+            containerColor = MaterialTheme.colorScheme.primary
+        ),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text(text = stringResource(id = titleRes))
+    }
 }
 
 @Preview(showBackground = true)

@@ -1,9 +1,9 @@
-package com.example.neteasemusic.ui
+package com.example.neteasemusic.core.ui
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
-import com.quick.app.core.model.Song
-import com.quick.app.core.ui.DiscoveryPreviewParameterData.SONGS
-import com.quick.app.util.Constant
+import com.example.neteasemusic.core.model.Song
+import com.example.neteasemusic.core.ui.DiscoveryPreviewParameterData.SONGS
+import com.example.neteasemusic.util.Constant
 
 /**
  * 提供发现界面预览数据

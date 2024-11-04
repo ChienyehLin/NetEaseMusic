@@ -1,4 +1,4 @@
-package com.example.neteasemusic.ui
+package com.example.neteasemusic.util
 
 object Constant {
     const val VALUE_NO = -1

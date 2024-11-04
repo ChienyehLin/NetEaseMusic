@@ -1,4 +1,4 @@
-package com.example.neteasemusic.design.theme
+package com.example.neteasemusic.core.design.theme
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChevronRight

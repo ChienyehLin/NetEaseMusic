@@ -1,4 +1,4 @@
-package com.example.neteasemusic.design.component
+package com.example.neteasemusic.core.design.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -16,7 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.neteasemusic.core.extension.clickableNoRipple
-import com.example.neteasemusic.design.theme.SpaceSmallHeight
+import com.example.neteasemusic.core.design.theme.SpaceSmallHeight
 
 import com.example.neteasemusic.feature.main.TopLevelDestination
 
