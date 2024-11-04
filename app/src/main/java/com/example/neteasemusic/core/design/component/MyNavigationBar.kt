@@ -1,11 +1,13 @@
 package com.example.neteasemusic.core.design.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -15,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.neteasemusic.core.design.theme.SpaceExtraMedium
 import com.example.neteasemusic.core.extension.clickableNoRipple
 import com.example.neteasemusic.core.design.theme.SpaceSmallHeight
 
@@ -34,6 +37,7 @@ fun MyNavigationBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surfaceVariant)
             .navigationBarsPadding(),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -46,6 +50,7 @@ fun MyNavigationBar(
             Column(
                 modifier = Modifier
                     .weight(1f)
+                    .padding(top = SpaceExtraMedium)
                     .clickableNoRipple {
                         onNavigateToDestination(index)
                     }, horizontalAlignment = Alignment.CenterHorizontally
