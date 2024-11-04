@@ -21,6 +21,7 @@ import com.example.neteasemusic.R
 import com.example.neteasemusic.core.design.theme.NetEaseMusicTheme
 import com.example.neteasemusic.core.design.theme.SpaceMedium
 import com.example.neteasemusic.core.design.theme.SpaceSmallHeight
+import com.example.neteasemusic.core.design.theme.extraSmallRoundedCornerShape
 import com.example.neteasemusic.core.model.Song
 import com.example.neteasemusic.core.ui.DiscoveryPreviewParameterData.SONG
 import com.example.neteasemusic.core.ui.DiscoveryPreviewParameterData.SONGS
@@ -43,7 +44,7 @@ fun SongItem(song: Song, modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(50.dp)
-                .clip(MaterialTheme.shapes.small)
+                .clip(extraSmallRoundedCornerShape)
             //.background(LocalDividerColor.current)
         )
 

@@ -39,6 +39,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.example.neteasemusic.R
+import com.example.neteasemusic.core.design.theme.LocalDividerColor
 import com.example.neteasemusic.core.design.theme.NetEaseMusicTheme
 import com.example.neteasemusic.core.design.theme.SpaceExtraMedium
 import com.example.neteasemusic.core.design.theme.SpaceMedium
@@ -51,7 +52,7 @@ import com.example.neteasemusic.song.component.SongItem
 
 @Composable
 fun DiscoveryRoute() {
-    DiscoveryScreen()
+    DiscoveryScreen(songs = SONGS)
 }
 
 @Composable
@@ -109,7 +110,7 @@ fun DiscoverTopBar(toggleDrawer: () -> Unit, toSearch: () -> Unit) {
                 .fillMaxWidth()
                 .height(38.dp)
                 .clip(RoundedCornerShape(50.dp))
-                .background(Color.Gray)
+                .background(LocalDividerColor.current)
                 .clickable { toSearch() },
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,

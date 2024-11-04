@@ -14,6 +14,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.neteasemusic.core.design.component.MyNavigationBar
+import com.example.neteasemusic.core.design.theme.SpaceExtraSmallHeight
 import com.example.neteasemusic.feature.discover.DISCOVERY_ROUTE
 import com.example.neteasemusic.feature.discover.DiscoveryRoute
 import com.example.neteasemusic.feature.feed.FeedRoute
@@ -58,6 +59,7 @@ fun MainScreen(finishPage: () -> Unit = {}) {
             }
 
         }
+        SpaceExtraSmallHeight()
         MyNavigationBar(
             modifier = Modifier.fillMaxWidth(),
             destinations = TopLevelDestination.entries,
