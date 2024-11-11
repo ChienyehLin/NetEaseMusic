@@ -15,7 +15,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.example.neteasemusic.R
 import com.example.neteasemusic.core.design.theme.NetEaseMusicTheme
@@ -24,8 +23,6 @@ import com.example.neteasemusic.core.design.theme.SpaceSmallHeight
 import com.example.neteasemusic.core.design.theme.extraSmallRoundedCornerShape
 import com.example.neteasemusic.core.model.Song
 import com.example.neteasemusic.core.ui.DiscoveryPreviewParameterData.SONG
-import com.example.neteasemusic.core.ui.DiscoveryPreviewParameterData.SONGS
-import com.example.neteasemusic.core.ui.DiscoveryPreviewParameterProvider
 
 
 /**
@@ -72,7 +69,7 @@ fun SongItem(song: Song, modifier: Modifier = Modifier) {
 
 @Preview
 @Composable
-fun ItemPreview(
+fun SongItemPreview(
 ) {
     NetEaseMusicTheme {
         SongItem(SONG)

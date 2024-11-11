@@ -1,4 +1,4 @@
-package com.quick.app.core.model.response
+package com.example.neteasemusic.core.model.response
 
 import kotlinx.serialization.Serializable
 
