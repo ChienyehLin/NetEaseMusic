@@ -1,8 +1,11 @@
 package com.example.neteasemusic.core.model.response
 
+import kotlinx.serialization.Serializable
+
 /**
  * 解析网路响应
  */
+@Serializable
 data class NetworkResponse<T>(
 
     /**
